@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
-    double finalScore = 0;
+    double finalScore;
     String playerName;
 
     @Override
@@ -27,23 +27,9 @@ public class Main2Activity extends AppCompatActivity {
         playerName = nameIntent.getStringExtra("player_name");
     }
 
-    public void onClickQ1(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        switch (view.getId()) {
-            case R.id.radio_button_q1a1:
-                if (checked)
-                    break;
-            case R.id.radio_button_q1a2:
-                if (checked)
-                    break;
-            case R.id.radio_button_q1a3:
-                if (checked)
-                    break;
-            case R.id.radio_button_q1a4:
-                if (checked)
-                    break;
-        }
-    }
+    /**
+     * Set the radio buttons
+     */
 
     public void onClickQ2(View view) {
         boolean checked = ((RadioButton) view).isChecked();
@@ -58,6 +44,24 @@ public class Main2Activity extends AppCompatActivity {
                 if (checked)
                     break;
             case R.id.radio_button_q2a4:
+                if (checked)
+                    break;
+        }
+    }
+
+    public void onClickQ3(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+        switch (view.getId()) {
+            case R.id.radio_button_q3a1:
+                if (checked)
+                    break;
+            case R.id.radio_button_q3a2:
+                if (checked)
+                    break;
+            case R.id.radio_button_q3a3:
+                if (checked)
+                    break;
+            case R.id.radio_button_q3a4:
                 if (checked)
                     break;
         }
@@ -134,13 +138,13 @@ public class Main2Activity extends AppCompatActivity {
 
     public void onClickQ9(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-        switch (view.getId()) {
-            case R.id.radio_button_q9a1:
-                if (checked)
-                    break;
-            case R.id.radio_button_q9a2:
-                if (checked)
-                    break;
+        if (view.getId() == R.id.radio_button_q9a1) {
+            if (checked);
+
+            else if (view.getId() == R.id.radio_button_q9a2) {
+                if (checked);
+
+            }
         }
     }
 
@@ -166,16 +170,16 @@ public class Main2Activity extends AppCompatActivity {
      * This method is called when the submit button is clicked.
      */
     public void seeScore(View view) {
-      // EditText nameText = (EditText) findViewById(R.id.name_field);
-      // Editable user = nameText.getText();
+        finalScore = 0;
 
         /**
-         * 1st question (RadioButton)
+         * 1st question (EditText)
          */
-        RadioButton q1a1 = (RadioButton) findViewById(R.id.radio_button_q1a1);
-        boolean q1a1Checked = q1a1.isChecked();
-        if (q1a1Checked) {
-            finalScore += 1;
+        EditText author;
+        author = (EditText) findViewById(R.id.edit_text_q1);
+        String authorBook = author.getText().toString();
+        if (authorBook.equalsIgnoreCase("Karl Marx")) {
+            finalScore++;
         }
 
         /**
@@ -184,17 +188,16 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q2a2 = (RadioButton) findViewById(R.id.radio_button_q2a2);
         boolean q2a2Checked = q2a2.isChecked();
         if (q2a2Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
-         * 3rd question (EditText)
+         * 3rd question (RadioButton)
          */
-        EditText author;
-        author = (EditText) findViewById(R.id.edit_text_q3);
-        String authorBook = author.getText().toString();
-        if (authorBook.equals("Karl Marx")) {
-            finalScore += 1;
+        RadioButton q3a1 = (RadioButton) findViewById(R.id.radio_button_q3a1);
+        boolean q3a1Checked = q3a1.isChecked();
+        if (q3a1Checked) {
+            finalScore++;
         }
 
         /**
@@ -203,7 +206,7 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q4a2 = (RadioButton) findViewById(R.id.radio_button_q4a2);
         boolean q4a2Checked = q4a2.isChecked();
         if (q4a2Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
@@ -212,7 +215,7 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q5a3 = (RadioButton) findViewById(R.id.radio_button_q5a3);
         boolean q5a3Checked = q5a3.isChecked();
         if (q5a3Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
@@ -221,7 +224,7 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q6a4 = (RadioButton) findViewById(R.id.radio_button_q6a4);
         boolean q6a4Checked = q6a4.isChecked();
         if (q6a4Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
@@ -229,14 +232,12 @@ public class Main2Activity extends AppCompatActivity {
          */
         CheckBox q7a1 = (CheckBox) findViewById(R.id.check_box_q7a1);
         boolean q7a1Checked = q7a1.isChecked();
-        if (q7a1Checked) {
-            finalScore += 0.5;
-        }
 
         CheckBox q7a2 = (CheckBox) findViewById(R.id.check_box_q7a2);
         boolean q7a2Checked = q7a2.isChecked();
-        if (q7a2Checked) {
-            finalScore += 0.5;
+
+        if (q7a1Checked && q7a2Checked) {
+            finalScore++;
         }
 
         /**
@@ -245,7 +246,7 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q8a2 = (RadioButton) findViewById(R.id.radio_button_q8a2);
         boolean q8a2Checked = q8a2.isChecked();
         if (q8a2Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
@@ -254,7 +255,7 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q9a2 = (RadioButton) findViewById(R.id.radio_button_q9a2);
         boolean q9a2Checked = q9a2.isChecked();
         if (q9a2Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
@@ -263,7 +264,7 @@ public class Main2Activity extends AppCompatActivity {
         RadioButton q10a1 = (RadioButton) findViewById(R.id.radio_button_q10a1);
         boolean q10a1Checked = q10a1.isChecked();
         if (q10a1Checked) {
-            finalScore += 1;
+            finalScore++;
         }
 
         /**
@@ -274,12 +275,14 @@ public class Main2Activity extends AppCompatActivity {
         Intent i = getIntent();
         playerName = i.getStringExtra("player_name");
     }
-
-        public void restart(View view){
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        }
+        /**Restart Method resets the values so the player turns to default and Buttons &
+         * data is restored to default
+        */
+        public void restart(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }
 
 

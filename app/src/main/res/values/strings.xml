@@ -5,7 +5,7 @@
     <string name="how_wise_are_you">How wise are you?</string>
     <string name="type_your_name_here">Type your name here</string>
     <string name="let_s_go">Let\'s go!</string>
-    <string name="question_1">1. What philosopher said: \'Whatever doesn\'t kill you simply makes you stronger'\?</string>
+    <string name="question_3">3. What philosopher said: \'Whatever doesn\'t kill you simply makes you stronger\'?</string>
     <string name="friedrich_nietzsche">Friedrich Nietzsche</string>
     <string name="martin_heidegger">Martin Heidegger</string>
     <string name="karl_marx">Karl Marx</string>
@@ -14,7 +14,7 @@
     <string name="love_of_wisdom">love of wisdom</string>
     <string name="a_lover_is_wise">a lover is wise</string>
     <string name="it_is_wise_to_love">it is wise to love</string>
-    <string name="question_3">3. Who wrote \'The Belgian Massacres\'?</string>
+    <string name="question_1">1. Who wrote \'The Belgian Massacres\'?</string>
     <string name="type_your_response_here">Type your response here</string>
     <string name="question_4">4. Heidegger investigates the question of Being in which book?</string>
     <string name="introduction_to_metaphysics">Introduction to Metaphysics</string>

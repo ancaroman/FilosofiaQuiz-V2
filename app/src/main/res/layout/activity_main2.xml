@@ -17,36 +17,15 @@
             android:fontFamily="@string/my_font"
             android:text="@string/question_1" />
 
-        <RadioGroup style="@style/RadioGroupStyle">
-
-            <RadioButton
-                android:id="@+id/radio_button_q1a1"
-                style="@style/RadioButtonStyle"
-                android:fontFamily="@string/my_font"
-                android:onClick="onClickQ1"
-                android:text="@string/friedrich_nietzsche" />
-
-            <RadioButton
-                android:id="@+id/radio_button_q1a2"
-                style="@style/RadioButtonStyle"
-                android:fontFamily="@string/my_font"
-                android:onClick="onClickQ1"
-                android:text="@string/hans_georg_gadamer" />
-
-            <RadioButton
-                android:id="@+id/radio_button_q1a3"
-                style="@style/RadioButtonStyle"
-                android:fontFamily="@string/my_font"
-                android:onClick="onClickQ1"
-                android:text="@string/martin_heidegger" />
-
-            <RadioButton
-                android:id="@+id/radio_button_q1a4"
-                style="@style/RadioButtonStyle"
-                android:fontFamily="@string/my_font"
-                android:onClick="onClickQ1"
-                android:text="@string/karl_marx" />
-        </RadioGroup>
+        <EditText
+            android:id="@+id/edit_text_q1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:hint="@string/type_your_response_here"
+            android:imeOptions="actionSend"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/my_text_size" />
 
         <TextView
             style="@style/TextViewAM2"
@@ -84,20 +63,42 @@
                 android:text="@string/it_is_wise_to_love" />
         </RadioGroup>
 
+
         <TextView
             style="@style/TextViewAM2"
             android:fontFamily="@string/my_font"
             android:text="@string/question_3" />
 
-        <EditText
-            android:id="@+id/edit_text_q3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_space"
-            android:hint="@string/type_your_response_here"
-            android:imeOptions="actionSend"
-            android:inputType="textCapWords"
-            android:textSize="@dimen/my_text_size" />
+        <RadioGroup style="@style/RadioGroupStyle">
+
+            <RadioButton
+                android:id="@+id/radio_button_q3a1"
+                style="@style/RadioButtonStyle"
+                android:fontFamily="@string/my_font"
+                android:onClick="onClickQ3"
+                android:text="@string/friedrich_nietzsche" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q3a2"
+                style="@style/RadioButtonStyle"
+                android:fontFamily="@string/my_font"
+                android:onClick="onClickQ3"
+                android:text="@string/hans_georg_gadamer" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q3a3"
+                style="@style/RadioButtonStyle"
+                android:fontFamily="@string/my_font"
+                android:onClick="onClickQ3"
+                android:text="@string/martin_heidegger" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q3a4"
+                style="@style/RadioButtonStyle"
+                android:fontFamily="@string/my_font"
+                android:onClick="onClickQ3"
+                android:text="@string/karl_marx" />
+        </RadioGroup>
 
         <TextView
             style="@style/TextViewAM2"
@@ -316,22 +317,22 @@
             android:orientation="horizontal">
 
             <Button
-                style="@style/FinalButtons"
                 android:id="@+id/submit_score"
-                android:background="@color/blue"
+                style="@style/FinalButtons"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="35dp"
+                android:background="@color/blue"
                 android:onClick="seeScore"
                 android:text="@string/submit" />
 
             <Button
-                style="@style/FinalButtons"
                 android:id="@+id/restart_button"
+                style="@style/FinalButtons"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="35dp"
                 android:background="@color/red"
-                android:text="@string/try_again"
-                android:onClick="restart" />
+                android:onClick="restart"
+                android:text="@string/try_again" />
         </RelativeLayout>
 
     </LinearLayout>
